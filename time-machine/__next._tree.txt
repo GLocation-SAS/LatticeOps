@@ -1,0 +1,6 @@
+:HL["/LatticeOps/_next/static/chunks/0jspij1va81zv.css","style"]
+:HL["/LatticeOps/_next/static/chunks/0q64zzb-fivfi.css","style"]
+:HL["/LatticeOps/_next/static/media/07454f8ad8aaac57-s.p.0tqkxa-w3pk~c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/LatticeOps/_next/static/media/e8f2fbee2754df70-s.p.0fzkl03jw-sdz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/logos/Giflattice.gif","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"time-machine","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"DlOla-Dng7Um8LZbeTCKv"}
