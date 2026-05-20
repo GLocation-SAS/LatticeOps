@@ -1,0 +1,76 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "tailwindcss"
+    ],
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:tailwindcss/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "tailwindcss": {
+            "callees": [
+                "cn",
+                "clsx",
+                "classnames"
+            ],
+            "config": "frontend/tailwind.config.ts"
+        }
+    },
+    "rules": {
+        /* 🚫 No inline styles */
+        "react/forbid-dom-props": [
+            "error",
+            {
+                "forbid": [
+                    "style"
+                ]
+            }
+        ],
+        /* 🚫 No colores hardcodeados (#fff, rgb, rgba, hsl) */
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "Literal[value=/^#([0-9a-fA-F]{3,8})$/]",
+                "message": "❌ No usar colores hex directamente. Usa tokens del design system."
+            },
+            {
+                "selector": "Literal[value=/^rgb/i]",
+                "message": "❌ No usar rgb/rgba directamente. Usa tokens del design system."
+            },
+            {
+                "selector": "Literal[value=/^hsl/i]",
+                "message": "❌ No usar hsl directamente. Usa tokens del design system."
+            },
+            /* 🚫 Bloquear clases Tailwind fuera del sistema (ej: bg-red-500) en JSX */
+            {
+                "selector": "JSXAttribute[name.name='className'] > Literal[value=/-(50|100|200|300|400|500|600|700|800|900)$/]:not([value=/^(primary|secondary|neutral|warning|info|success|error|background|text|border|icon)-/])",
+                "message": "❌ No usar clases de colores por defecto de Tailwind (ej: bg-red-500). Usa los tokens del sistema (primary, secondary, semantic, etc.)."
+            }
+        ],
+        /* 🚫 Bloquear uso directo de variables CSS en JSX */
+        "tailwindcss/no-arbitrary-value": [
+            "error",
+            {
+                "message": "❌ No usar valores arbitrarios como bg-[--color-primary]. Usa clases del sistema."
+            }
+        ],
+        /* ⚠️ Recomendado: orden de clases consistente */
+        "tailwindcss/classnames-order": "warn",
+        /* ⚠️ Evitar clases duplicadas */
+        "tailwindcss/no-contradicting-classname": "error",
+        /* 🧠 TypeScript estricto */
+        "@typescript-eslint/no-explicit-any": "error",
+        /* 🧹 Buenas prácticas React */
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+    }
+}

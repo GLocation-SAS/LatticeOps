@@ -1,0 +1,32 @@
+{
+  "name": "designengine---copia",
+  "version": "1.0.0",
+  "description": "first commit\r # LatticeOps # LatticeOps # LatticeOps",
+  "homepage": "https://github.com/GLocation-SAS/LatticeOps#readme",
+  "bugs": {
+    "url": "https://github.com/GLocation-SAS/LatticeOps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLocation-SAS/LatticeOps.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "next": "^12.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-next": "^12.0.0"
+  }
+}
