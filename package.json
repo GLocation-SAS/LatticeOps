@@ -15,18 +15,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d frontend/out",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "next": "^12.0.0"
-  },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-next": "^12.0.0"
+    "gh-pages": "^6.3.0"
   }
 }
